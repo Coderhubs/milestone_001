@@ -1,0 +1,133 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(26, 20, 22, 0.158);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  margin: 0; 
+}
+
+.page {
+  background-color: #F7EFE5;
+  width: 100%; 
+  max-width: 210mm;
+  height: auto; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 5px solid #3a6d7c;
+  box-shadow: 0px 0px 14px rgba(228, 21, 135, 0.1);
+  margin: 10px;
+}
+
+.leftPanel {
+  background-color: #2E073F;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.leftPanel img {
+  width: 70%;
+  border-radius: 50%;
+  margin-top: 30px;
+  border: 5px solid #fff;
+}
+
+.leftPanel h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: aqua;
+  margin-top: 50px;
+}
+
+.contact-info p {
+  font-size: 20px;
+  margin: 5px 0;
+  margin-top: 30px;
+}
+
+.toggle-container, .toggle-list {
+  margin-top: 20px;
+}
+
+.toggle-contents ul, .toggle-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.toggle-contents li, .toggle-list li {
+  font-size: 20px;
+  margin: 5px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 40px;
+}
+
+.rightPanel {
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.6em;
+}
+
+.rightPanel h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #2E073F;
+}
+
+.rightPanel p {
+  font-size: 14px;
+  line-height: 1.0em;
+  margin-bottom: 20px;
+  color: black;
+}
+
+#toggleSkillsButton, #toggleEducationButton {
+  background-color: rgb(104, 199, 104);
+  color: white;
+  border: none;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+#toggleSkillsButton:hover, #toggleEducationButton:hover {
+  background-color: rgb(80, 180, 80);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .page {
+    grid-template-columns: 1fr; /* Stack panels vertically */
+  }
+
+  .rightPanel, .leftPanel {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .leftPanel img {
+    width: 50%; 
+  }
+
+  .rightPanel p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 10px; 
+  }
+
+  .rightPanel p {
+    font-size: 14px; 
+  }
+}
